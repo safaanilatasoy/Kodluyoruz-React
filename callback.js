@@ -38,22 +38,43 @@ import fetch from 'node-fetch';
 
 
 // ASYN AWAİT
+// import fetch from "node-fetch";
 
-async function getData(){
-    const users = await (await fetch("https://jsonplaceholder.typicode.com/users"))
-    .json();
+// async function getData(){
+//     const users = await (await fetch("https://jsonplaceholder.typicode.com/users"))
+//     .json();
     
 
- const post1 = await (
-   await fetch("https://jsonplaceholder.typicode.com/posts/1")
- ).json();
+//  const post1 = await (
+//    await fetch("https://jsonplaceholder.typicode.com/posts/1")
+//  ).json();
  
-  const post2 = await (
-    await fetch("https://jsonplaceholder.typicode.com/posts/2")
-  ).json();
+//   const post2 = await (
+//     await fetch("https://jsonplaceholder.typicode.com/posts/2")
+//   ).json();
 
-    console.log("users", users);
-    console.log("post 1", post1);
-     console.log("post 2", post2);
+//     console.log("users", users);
+//     console.log("post 1", post1);
+//      console.log("post 2", post2);
+// }
+// getData();
+
+
+
+
+//  AXIOS Kütüphanesi
+
+import axios from "axios";
+
+async function getData() {
+  const {data: users} = await axios("https://jsonplaceholder.typicode.com/users");
+
+  const {data: post1} = await axios("https://jsonplaceholder.typicode.com/posts/1");
+
+  const {data: post2} = await axios("https://jsonplaceholder.typicode.com/posts/2");
+
+  console.log("users", users);
+  console.log("post 1", post1);
+  console.log("post 2", post2);
 }
 getData();

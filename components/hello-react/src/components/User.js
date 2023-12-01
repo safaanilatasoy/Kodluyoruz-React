@@ -1,6 +1,6 @@
 
 
-function User({name, surname, isLoggedIn}) {
+function User({name, surname, isLoggedIn, friends}) {
   return (
     <>
       {/* if login success*/}
@@ -10,6 +10,17 @@ function User({name, surname, isLoggedIn}) {
 
       {/* if login fail */}
       <h3 className="loginFail">{!isLoggedIn && `Giriş yapmadınız!`}</h3>
+
+
+
+      {
+       friends.map((friend, index) => (
+        <div key={index}> 
+        
+        {index} - {friend}
+        </div>
+       ))
+      }
     </>
   );
 }

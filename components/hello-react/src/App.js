@@ -9,7 +9,12 @@ function App() {
   return (
     <>
       <Header />
-      <User name="Anıl" surname="Atasoy" isLoggedIn={true}/>
+      <User 
+      name="Anıl" 
+      surname="Atasoy" 
+      isLoggedIn={true}
+      friends ={["Ali", "Ahmet", "Mehmet", "Ayşe"]}
+      />
 
 
     </>

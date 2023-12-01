@@ -1,6 +1,10 @@
 import './App.css';
 import Header from './components/Header'
 
+
+const name = "Anıl";
+const surname = "Atasoy";
+
 function App() {
   return (
     <>
@@ -15,6 +19,9 @@ function App() {
          
           <input id="myInput" type="text" />
         </label>
+
+        <h3>{name}</h3>
+        <h3>{`Fullname: ${name} ${surname}`}</h3>
 
     </>
 

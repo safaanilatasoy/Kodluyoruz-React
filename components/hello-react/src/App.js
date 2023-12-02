@@ -14,6 +14,13 @@ function App() {
       surname="Atasoy" 
       isLoggedIn={true}
       friends ={["Ali", "Ahmet", "Mehmet", "Ayşe"]}
+      age = {25}
+      address = {
+        {
+          title: "Maslak/Istanbul",
+          zip: 34755
+        }
+      }
       />
 
 

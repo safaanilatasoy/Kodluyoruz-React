@@ -4,7 +4,7 @@
     border: none;
     outline: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 body{
     display: flex;
@@ -16,6 +16,8 @@ body{
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,128,185,1) 63%, rgba(0,212,255,1) 100%);
 }
+
+/* ─── Main Container Css Start ───────────────────────────────────────────── */
 
 .mainContainer{   
     background-color: #fff;
@@ -69,6 +71,10 @@ body{
     background: #20232c;
 }
 
+/* ─── Main Container Css End ─────────────────────────────────────────────── */
+
+
+
 .cursorPointer{
     cursor:pointer;
 }
@@ -78,6 +84,60 @@ body{
 margin: auto;
 
 }
+
+
+/* ─── Settings Container CSS Start ───────────────────────────────────────── */
+
+.settingsContainer {
+    padding: 30px;
+    border-radius:11px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    
+}
+.settingsContainer i{
+    scale: 1.5;
+    cursor: pointer;
+}
+.settingsContainer:hover{
+    animation: spinner 2s ease;
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+      100% {
+        transform: rotate(360deg);
+      }
+}
+
+.menuContainer {
+    display: none;
+    position: absolute;
+    top: 65px; 
+    right: 50px;
+    background-color: #fff;
+    border-radius:11px;
+    box-shadow: 0 1px 10px #000;
+}
+.menuContainer ul{
+    padding:10px !important;
+    position: relative;
+    margin:auto;
+    left: 0;
+    font-size:0.8rem;
+}
+.menuContainer li{
+    list-style-type: none;
+    padding: 5px;
+    
+    
+}
+
+
+/* ─── Settings Container CSS End ───────────────────────────────────────── */
+
 
 /* For mobile devices */
 @media (max-width: 720px) {

@@ -80,9 +80,7 @@ body{
 }
 
 .ortala {
-display:flex !important; 
-justify-content:center !important;
-
+margin: auto;
 }
 
 /* For mobile devices */

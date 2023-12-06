@@ -10,7 +10,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     padding: 0 10px;
     min-height: 100vh;
     background: rgb(2,0,36);
@@ -30,6 +29,7 @@ body{
     display: flex;
         
 }
+
 
 
 .mainContainer form {
@@ -149,6 +149,7 @@ margin: auto;
     /* display: flex;
     justify-content: center;
      */
+}
 
 /* For mobile devices */
 @media (max-width: 720px) {
@@ -164,3 +165,4 @@ margin: auto;
  }
  
   
+}

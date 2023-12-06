@@ -15,7 +15,7 @@ setTimeout(() => {
         .then(data => {
             
             
-            const dataList = document.querySelector(".dataList");
+            const dataList = document.getElementById("dataList");
             
             data.map((user) => {
                 
@@ -24,7 +24,7 @@ setTimeout(() => {
                 const tr = document.createElement("tr");
     
                 tr.innerHTML = `
-                            <th scope="row">${user.id}</th>
+                            <td scope="row">${user.id}</td>
                             <td>${user.title}</td>
                             <td>
                             ${user.completed
@@ -50,3 +50,43 @@ document.addEventListener("DOMContentLoaded", function () {
   var menu = document.getElementById("menu");
   menu.style.display = "none";
 });
+
+function submitForm(){
+    // Title input
+    const title = document.getElementById("title").value;
+    
+    // Checkbox input
+    const isCompleted = document.getElementById("isCompleted").checked;
+
+
+    // Result table content
+    const dataList = document.getElementById("dataList");
+    const row = dataList.insertRow();
+
+
+    // if title and is Checked both of them is full then push 
+    if(title!==""){
+
+      document.getElementById("alertText").innerHTML = "";
+      // User ID, Title and Completed tables
+      const cellID = row.insertCell(0);
+      const cellTitle = row.insertCell(1);
+      const cellChecked = row.insertCell(2);
+
+      // ID Automatically incrementing
+      cellID.innerHTML = dataList.rows.length;
+
+      cellTitle.innerHTML = title;
+
+      cellChecked.innerHTML = isCompleted
+        ? '<i class="fa-solid fa-check" style="color: #3cbe19;"></i>'
+        : '<i class="fa-solid fa-xmark" style="color: #cb1010;"></i>';
+    } else{
+      // Alert text variable
+      const alertText = document.getElementById("alertText").innerHTML = 
+      '<span>You entered incomplete information, please try again.<span>'
+    }
+
+    // Form Cleaning
+    document.getElementById("dataForm").reset();
+}

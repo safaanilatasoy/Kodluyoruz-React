@@ -30,17 +30,19 @@
         <!-- Form Container Start -->
         
         <div class="mainContainer formBox">
-            <form>
+            <form id="dataForm">
                 <!-- Title input box -->
-                <input class="formInputTitle" type="text" name="title" placeholder="Title">
+                <input id="title" name="title" class="formInputTitle" type="text" placeholder="Title" required>
 
                 <!-- Checkbox -->
                 <label>Completed:</label>
-                <input name="IsCompleted" class="formInputCheckbox cursorPointer" type="checkbox">
+                <input id="isCompleted" name="IsCompleted" class="formInputCheckbox cursorPointer" type="checkbox" required>
 
-                <button type="submit">Save</button>
+                <button type="submit" onClick="submitForm()">Save</button>
 
+                <p id="alertText"></p>
             </form>
+                
         </div>
 
         <!-- Form Container End -->
@@ -62,7 +64,7 @@
                         <th scope="col">Completed</th>
                     </tr>
                 </thead>
-                <tbody class="dataList">
+                <tbody id="dataList">
                     
                 <!-- Data pulled from the API is listed here -->
 

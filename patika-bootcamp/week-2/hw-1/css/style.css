@@ -138,6 +138,17 @@ margin: auto;
 
 /* ─── Settings Container CSS End ───────────────────────────────────────── */
 
+/* ─── Alert Container ────────────────────────────────────────────────────── */
+
+#alertText{
+    color: red;
+    font-weight:500;
+    font-size: 0.8rem;
+    text-align: start;
+    margin-top: 10px;
+    /* display: flex;
+    justify-content: center;
+     */
 
 /* For mobile devices */
 @media (max-width: 720px) {

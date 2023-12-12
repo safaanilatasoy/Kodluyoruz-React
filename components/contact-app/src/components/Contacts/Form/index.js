@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import {useState} from 'react';
+import "../styles.css";
 
 function Form({addContact, contacts}) {
   const [form, setForm] = useState({fullname: "", phoneNumber: ""});
@@ -39,7 +40,7 @@ function Form({addContact, contacts}) {
         />
       </div>
 
-      <div>
+      <div className="formBtn">
         <button>Add</button>
       </div>
       </form>

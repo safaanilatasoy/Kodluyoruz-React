@@ -9,7 +9,6 @@ function List({ contacts }) {
     );
   });
 
-  console.log(filtered);
   return (
     <div>
       <input
@@ -17,13 +16,19 @@ function List({ contacts }) {
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)}
       />
-      <ul>
-        {contacts.map((contact, index) => (
-          <li key={index}>{contact.fullname}</li>
+      <ul className="list">
+        {filtered.map((contact, index) => (
+          <li key={index}>
+            <span>{contact.fullname}</span>
+            <span>{contact.phoneNumber}</span>
+          </li>
         ))}
       </ul>
+
+      <p>Total Contacts: ({filtered.length}) </p>
     </div>
   );
 }
 
 export default List;
+ 

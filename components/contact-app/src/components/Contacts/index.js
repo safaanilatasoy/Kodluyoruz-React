@@ -10,15 +10,15 @@ function Contacts() {
   const [contacts, setContacts] = useState([
     {
       fullname: "Anıl",
-      phoneNumber: "123123"
+      phoneNumber: "+90 541 4xx xx xx"
     },
     {
       fullname: "Ali",
-      phoneNumber: "324234"
+      phoneNumber: "+90 532 56x xx xx"
     },
     {
       fullname: "Ayşe",
-      phoneNumber: "543543"
+      phoneNumber: "+90 531 456 xx xx"
     }
   ]);
 

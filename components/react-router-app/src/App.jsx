@@ -27,9 +27,9 @@ function App() {
 
       
       <Switch>
+        <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
         <Route path="/users" component={Users} />
-        <Route path="/" component={Home} />
       </Switch>
     </div>
   </Router>

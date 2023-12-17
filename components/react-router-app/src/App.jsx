@@ -10,8 +10,8 @@ import Users from "./components/Users"
 function App() {
   return (
     <Router>
-    <div>
-      <nav>
+    
+      <nav className="navbar">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -31,7 +31,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/users" component={Users} />
       </Switch>
-    </div>
+    
   </Router>
   );
 }

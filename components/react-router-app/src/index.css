@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,16 +31,32 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 20px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
   min-height: 100vh;
 }
+
+.navbar{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar li {
+  padding: 10px;
+}
+
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  padding: 20px;
 }
 
 button {

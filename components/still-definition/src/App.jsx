@@ -1,16 +1,16 @@
 
 import './App.css'
+import A from "./components/A"
+import B from "./components/B"
 
 function App() {
 
   return (
     <>
-      <div style={{color: '#fff', backgroundColor: 'blue', padding: '10px'}}>
-        Lorem ipsum dolor sit amet consectetur, 
-        adipisicing elit. Quidem, labore.
-      </div>
-      
-      
+     <header className="App">
+      <A />
+      <B />
+     </header>
     </>
   )
 }

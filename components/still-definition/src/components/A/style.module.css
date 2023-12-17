@@ -1,0 +1,11 @@
+body {
+    color: black;
+}
+
+.title {
+    color:red;
+}
+.header {
+    background-color: aqua;
+    padding: 10px;
+}

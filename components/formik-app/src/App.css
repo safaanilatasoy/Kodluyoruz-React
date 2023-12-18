@@ -4,3 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+label {
+  display: block;
+}
+
+.formValidationError{
+  color:red;
+  fontWeight: bold;
+}

@@ -20,3 +20,8 @@
 .navbar li {
   padding: 10px;
 }
+.active{
+  background-color: black;
+  color: #fff;
+  padding: 3px;
+}

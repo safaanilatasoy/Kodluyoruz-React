@@ -1,22 +1,21 @@
 import "./App.css";
-import { Formik } from "formik";
+import { useFormik } from "formik";
 
 function App() {
+  const {handleSubmit, handleChange, values} = useFormik({
+    initialValues: {
+      firstName: "Anil",
+      lastName: "Atasoy",
+      gender: "male",
+      hobbies: [],
+      country: "turkey",
+    },
+    onSubmit: (values) => {
+       console.log(values);
+    },
+  });
   return (
     <>
-      <Formik
-        initialValues={{
-          firstName: "Anil",
-          lastName: "Atasoy",
-          gender: "male",
-          hobbies: [],
-          country: "turkey",
-        }}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
-      >
-        {({ handleSubmit, handleChange, values }) => (
           <form onSubmit={handleSubmit}>
             <label htmlFor="firstName">First Name</label>
             <input
@@ -88,8 +87,7 @@ function App() {
             <br />
             <code> {JSON.stringify(values)}</code>
           </form>
-        )}
-      </Formik>
+        )
     </>
   );
 }

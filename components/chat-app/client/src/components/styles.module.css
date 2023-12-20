@@ -45,4 +45,6 @@
 .chatItem.right {
     margin-right: 0;
     margin-left: auto;
+    background-color: #00a8ff;
+    color: #fff;
 }

@@ -7,7 +7,7 @@ const ChatContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 export const ChatProvider = ({ children }) => {
-    const [messages, setMessages] = useState([{message: "selam"}, {message: "naber"}]);
+    const [messages, setMessages] = useState([]);
 
     const values = {
         messages,

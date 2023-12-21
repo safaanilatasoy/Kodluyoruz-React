@@ -1,28 +1,28 @@
-import {render, screen} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {render, screen, fireEvent} from '@testing-library/react';
 import Counter from './index';
 
 
 describe('Counter Tests', ()=>{
+  
 
-        test("increase btn", async () => {
+        test("increase btn", () => {
           render(<Counter />);
     
           const count = screen.getByText("0");
           const increaseBtn = screen.getByText("Increase");
     
-          await userEvent.click(increaseBtn);
+           fireEvent.click(increaseBtn);
           expect(count).toHaveTextContent("1");
         });
 
 
-    test("decrease btn", async () => {
+    test("decrease btn",  () => {
       render(<Counter />);
 
       const count = screen.getByText("0");
       const decreaseBtn = screen.getByText("Decrease");
 
-      await userEvent.click(decreaseBtn);
+      fireEvent.click(decreaseBtn);
       expect(count).toHaveTextContent("-1");
     });
 

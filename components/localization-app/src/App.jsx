@@ -1,34 +1,40 @@
 /* eslint-disable no-unused-vars */
 import './App.css';
-import { IntlProvider, FormattedMessage, FormattedNumber } from "react-intl";
-import { useState } from 'react';
+import { IntlProvider, FormattedMessage } from "react-intl";
+import { useState, useEffect } from 'react';
 
 const messages = {
   "tr-TR": {
     title: "Bu bir başlık",
-    description: "3 yeni mesajınız var",
+    description: "{count} yeni mesajınız var",
   },
   "en-US": {
     title: "This is a title",
-    description: "You have 3 new messages",
+    description: "You have {count} new messages",
   },
 };
 
 
 function App() {
 
-const [lang, setLang] = useState('tr-TR');
+  const isLocale = localStorage.getItem('locale');
+  const defaultLocale = isLocale ? isLocale : navigator.language;
+  const [locale, setLocale] = useState(defaultLocale);
+
+  useEffect(() => {
+    localStorage.setItem('locale',locale)
+  },[locale])
 
   return (
     <div className="App">
-      <IntlProvider messages={messages[lang]}>
+      <IntlProvider locale={locale} messages={messages[locale]}>
         <FormattedMessage id="title" />
         <p>
-          <FormattedMessage id="description" />
+          <FormattedMessage id="description" values={{count: 1}}/>
         </p>
         <br />
-        <button onClick={() => setLang("tr-TR")}>TR</button>
-        <button onClick={() => setLang("en-US")}>EN</button>
+        <button onClick={() => setLocale("tr-TR")}>TR</button>
+        <button onClick={() => setLocale("en-US")}>EN</button>
       </IntlProvider>
     </div>
   );

@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding: 0;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-image: url("./assets/bgheader.jpg");
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+header button i{
+  font-size: 18px;
+}
+header h1{
+  color: #fff;
+}
+header input{
+  padding:10px;
+  border-radius: 5px;
+  border-style: none;
+}
+header button{
+  padding:6px;
+  margin:2px;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
